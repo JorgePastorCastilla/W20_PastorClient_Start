@@ -7,5 +7,5 @@ public class PlayerSerializable
     public string Name;
     public string Email;
     public string BirthDay;
-    public string ConnectedSince;
+    public string LastLog;
 }

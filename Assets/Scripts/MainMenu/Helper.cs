@@ -82,6 +82,7 @@ public class Helper : MonoBehaviour
         }
         else
         {
+            //meter mas campos
             PlayerSerializable playerSerializable = JsonUtility.FromJson<PlayerSerializable>(httpClient.downloadHandler.text);
             player.Id = playerSerializable.Id;
             player.Name = playerSerializable.Name;
