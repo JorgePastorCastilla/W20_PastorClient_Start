@@ -2095,7 +2095,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1124237344}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1181937773}
+        m_MethodName: OnLoginButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1124237344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2358,6 +2369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1181937771}
   - component: {fileID: 1181937772}
+  - component: {fileID: 1181937773}
   m_Layer: 5
   m_Name: Login
   m_TagString: Untagged
@@ -2405,7 +2417,26 @@ MonoBehaviour:
   logoutButton: {fileID: 1921994702}
   playGameButton: {fileID: 355002746}
   messageBoardText: {fileID: 1956952414}
-  player: {fileID: 0}
+  player: {fileID: 755269022}
+--- !u!114 &1181937773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181937770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e1d4608237a2040b1b250d9991421b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emailInputField: {fileID: 729027871}
+  passwordInputField: {fileID: 54831549}
+  loginButton: {fileID: 1124237343}
+  logoutButton: {fileID: 1921994702}
+  playGameButton: {fileID: 355002746}
+  messageBoardText: {fileID: 1956952414}
+  player: {fileID: 755269022}
 --- !u!1 &1221850987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2773,7 +2804,7 @@ MonoBehaviour:
   confirmPasswordInputField: {fileID: 1526113773}
   registerButton: {fileID: 1656073618}
   messageBoardText: {fileID: 1956952414}
-  player: {fileID: 0}
+  player: {fileID: 755269022}
 --- !u!114 &1384517848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3133,7 +3164,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1656073619}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1384517847}
+        m_MethodName: OnRegisterButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1656073619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3758,7 +3800,6 @@ GameObject:
   - component: {fileID: 2087033552}
   - component: {fileID: 2087033551}
   - component: {fileID: 2087033550}
-  - component: {fileID: 2087033554}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3850,40 +3891,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2087033554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087033549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23be45e95f850574ab2b517daf9313c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startIndex: 6
-  tabObjects:
-  - tabStop: 1
-    tabObject: {fileID: 807490459}
-  - tabStop: 1
-    tabObject: {fileID: 1090547154}
-  - tabStop: 1
-    tabObject: {fileID: 1695394501}
-  - tabStop: 1
-    tabObject: {fileID: 1181416629}
-  - tabStop: 1
-    tabObject: {fileID: 1526113771}
-  - tabStop: 1
-    tabObject: {fileID: 1656073616}
-  - tabStop: 1
-    tabObject: {fileID: 729027869}
-  - tabStop: 1
-    tabObject: {fileID: 54831547}
-  - tabStop: 1
-    tabObject: {fileID: 1124237341}
-  - tabStop: 1
-    tabObject: {fileID: 1921994700}
 --- !u!1 &2145308551
 GameObject:
   m_ObjectHideFlags: 0

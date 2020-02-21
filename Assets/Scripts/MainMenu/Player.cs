@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private const string _httpServerAddress = "";
+    private const string _httpServerAddress = "http://localhost:64497/";
     public string HttpServerAddress
     {
         get

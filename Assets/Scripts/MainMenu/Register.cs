@@ -20,7 +20,7 @@ public class Register : MonoBehaviour
 
     public void OnRegisterButtonClick()
     {
-        RegisterNewUser();
+        StartCoroutine( RegisterNewUser() );
     }
 
     private IEnumerator RegisterNewUser()
@@ -33,7 +33,7 @@ public class Register : MonoBehaviour
         player.Email = emailInputField.text;
         player.Name = nameInputField.text;
         player.BirthDay = DateTime.Parse(birthdateInputField.text);
-        yield return InsertPlayer();
+        yield return  InsertPlayer() ;
         messageBoardText.text += $"\nPlayer \"{player.Name}\" registered.";
         player.Id = string.Empty;
         player.Token = string.Empty;
@@ -44,7 +44,7 @@ public class Register : MonoBehaviour
 
     private IEnumerator RegisterUser()
     {
-        UnityWebRequest httpClient = new UnityWebRequest(player.HttpServerAddress + "api/Account/Register");
+        UnityWebRequest httpClient = new UnityWebRequest(player.HttpServerAddress + "api/Account/Register", "POST");
 
         AspNetUserRegister newUser = new AspNetUserRegister();
         newUser.Email = emailInputField.text;
@@ -56,6 +56,7 @@ public class Register : MonoBehaviour
         httpClient.uploadHandler = new UploadHandlerRaw(dataToSend);
 
         httpClient.SetRequestHeader("Content-Type", "application/json");
+        httpClient.certificateHandler = new BypassCertificate();
 
         yield return httpClient.SendWebRequest();
 
@@ -73,6 +74,7 @@ public class Register : MonoBehaviour
     {
         PlayerSerializable playerSerializable = new PlayerSerializable();
         playerSerializable.Id = player.Id;
+        playerSerializable.Id = playerSerializable.Id.Trim('"');
         playerSerializable.Name = player.Name;
         playerSerializable.Email = player.Email;
         playerSerializable.BirthDay = player.BirthDay.ToString();
